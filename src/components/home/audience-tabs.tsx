@@ -130,31 +130,33 @@ function Bento({ tab }: { tab: AudienceTab }) {
 
 export default function AudienceTabs() {
   return (
-    <section className="border-b border-[#d6d9da] bg-white">
-      <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
+    <section className="border-b border-[#d6d9da]">
+      <div className="w-full ">
         <Tabs defaultValue="cgba">
-          <TabsList
-            variant="line"
-            className="grid w-full grid-cols-2 gap-0 border-b border-[#d6d9da] p-0 md:grid-cols-4"
-          >
-            {audienceTabs.map((t) => {
-              const Icon = tabIcons[t.id];
-              return (
-                <TabsTrigger
-                  key={t.id}
-                  value={t.id}
-                  className="flex-col gap-1.5 rounded-none border-x-0 border-t-0 border-b-2 border-transparent px-2 py-4 whitespace-normal text-[#767676] after:hidden hover:text-[#090d46] data-active:border-[#ffd400] data-active:bg-transparent data-active:text-[#090d46]"
-                >
-                  <Icon className="size-5" aria-hidden />
-                  <span className="text-sm font-bold">{t.label}</span>
-                </TabsTrigger>
-              );
-            })}
-          </TabsList>
+          <div className="border-b border-ink-200 flex justify-center">
+            <TabsList
+              variant="line"
+              className="px-4 sm:px-6 grid-cols-4 mx-auto max-w-6xl w-full"
+            >
+              {audienceTabs.map((t) => {
+                const Icon = tabIcons[t.id];
+                return (
+                  <TabsTrigger
+                    key={t.id}
+                    value={t.id}
+                    className="flex-col border-x-0 border-t-0 border-b-3 border-transparent px-2 py-4 whitespace-normal text-[#767676] after:hidden hover:text-[#090d46] data-active:border-[#ffd400] data-active:bg-transparent data-active:text-[#090d46]"
+                  >
+                    <Icon className="size-10" aria-hidden />
+                    <span className="text-sm font-bold">{t.label}</span>
+                  </TabsTrigger>
+                );
+              })}
+            </TabsList>
+          </div>
 
           {audienceTabs.map((tab) => (
-            <TabsContent key={tab.id} value={tab.id} className="mt-8">
-              <p className="text-sm font-bold tracking-[0px] text-[#00539d] uppercase">
+            <TabsContent key={tab.id} value={tab.id} className="mt-8 mx-auto max-w-6xl px-4 sm:px-6 ">
+              <p className="text-sm font-bold tracking-normal text-[#00539d] uppercase">
                 {tab.eyebrow}
               </p>
               <h2 className="mt-2 text-[28px] font-bold tracking-[0px] text-[#222222] sm:text-4xl">

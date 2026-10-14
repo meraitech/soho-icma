@@ -1,0 +1,43 @@
+# mutagen project start
+# mutagen project list
+# mutagen project terminate
+# mutagen sync list           # Status: Watching for changes (not "Connecting")
+
+# # Mac → PC
+# touch sync-test-mac && ssh ifal@192.168.100.145 "ls ~/workspace/products/live2dev/sync-test-mac"
+# # PC → Mac
+# ssh ifal@192.168.100.145 "touch ~/workspace/products/live2dev/sync-test-pc"; ls sync-test-pc
+# # cleanup both sides
+# rm sync-test-mac sync-test-pc; ssh ifal@192.168.100.145 "rm ~/workspace/products/live2dev/sync-test-pc"
+
+sync:
+  defaults:
+    mode: two-way-resolved
+    ignore:
+      vcs: true
+      paths:
+        - node_modules
+        - "**/node_modules"
+        - .next
+        - "**/.next"
+        - dist
+        - "**/dist"
+        - build
+        - "**/build"
+        - target
+        - "**/target"
+        - .turbo
+        - "**/.turbo"
+        - coverage
+        - "**/coverage"
+        - "*.log"
+        - ".DS_Store"
+        - graphify-out
+    permissions:
+      defaultFileMode: 0644
+      defaultDirectoryMode: 0755
+
+  live2dev:
+    alpha: /Users/ranaufal/MyWork/Business/Orphic/Merai/software-house/soho-icma
+    beta: ifal@192.168.100.145:/home/ifal/workspace/business/orphic/clients/soho-icma
+    flushOnCreate: true
