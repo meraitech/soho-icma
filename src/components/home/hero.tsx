@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function HomeHero() {
   return (
     <section className="bg-[#090d46] text-white">
-      <div className="grid items-center gap-10 px-4 py-16 sm:px-6 sm:py-16 lg:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-16 lg:grid-cols-2">
         <div>
           <p className="text-sm font-bold tracking-[0px] text-[#ffd400] uppercase">
             Certified Management Accountants in Indonesia

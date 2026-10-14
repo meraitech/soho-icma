@@ -11,7 +11,7 @@ const links = [
 export default function Spotlight() {
   return (
     <section className="bg-[#090d46] text-white">
-      <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <h2 className="text-[28px] font-bold tracking-[0px] sm:text-4xl">
           Start here
         </h2>

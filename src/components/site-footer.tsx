@@ -5,7 +5,7 @@ import { officers, site } from "@/data/site";
 export default function SiteFooter() {
   return (
     <footer className="bg-[#090d46] text-white">
-      <div className="mx-auto grid max-w-[1024px] gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
             <span className="flex size-11 items-center justify-center rounded-none bg-[#ffd400] text-lg font-bold text-[#090d46]">
@@ -60,7 +60,7 @@ export default function SiteFooter() {
       </div>
 
       <Separator className="bg-[#272a5c]" />
-      <div className="mx-auto flex max-w-[1024px] flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-[#e6f1ff]/60 sm:flex-row sm:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-[#e6f1ff]/60 sm:flex-row sm:px-6">
         <p>Copyright © 2026 {site.name} — ICMA Indonesia Branch.</p>
         <p>
           <Link href="/about" className="hover:text-white hover:underline">About</Link>

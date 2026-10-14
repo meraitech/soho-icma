@@ -26,7 +26,7 @@ export default function ImacPage() {
         intro="International Management Accounting Collaborative — the global body accrediting the CMA pathway."
       />
       <section className="bg-white">
-        <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <p className="max-w-3xl text-base leading-[1.33] font-normal text-[#303030]">
             CMAs in Indonesia are qualified via the education and training programme accredited
             by the International Management Accounting Collaborative and delivered by the

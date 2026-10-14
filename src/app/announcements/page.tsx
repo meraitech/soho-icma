@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
+import Link from "next/link";
 import PageHero from "@/components/page-hero";
 import { latestUpdates } from "@/data/site";
 
 export const metadata: Metadata = { title: "Announcement" };
+
+const extraAnnouncement = {
+  title: "New intake open at IPMI, RAD Indonesia and BNC",
+  href: "/programs",
+  category: "Education",
+  date: "2026",
+  image:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+};
+
+const announcements = [...latestUpdates, extraAnnouncement];
 
 export default function AnnouncementsPage() {
   return (
@@ -15,33 +26,33 @@ export default function AnnouncementsPage() {
         intro="Official updates from the CMA Indonesia branch."
       />
       <section className="bg-white">
-        <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
-          <div className="flex max-w-3xl flex-col gap-4">
-            {latestUpdates.map((u) => (
-              <Card key={u.title}>
-                <CardHeader className="flex flex-col gap-2">
-                  <Badge variant="secondary" className="w-fit uppercase">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {announcements.map((u) => (
+              <Link
+                key={u.title}
+                href={u.href}
+                className="group flex flex-col rounded-none bg-transparent"
+              >
+                <div className="relative aspect-video w-full overflow-hidden rounded-none">
+                  <Image
+                    src={u.image}
+                    alt={u.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col px-0 pt-4">
+                  <p className="text-xs font-bold tracking-[0px] text-[#00539d] uppercase">
                     {u.category} · {u.date}
-                  </Badge>
-                  <CardTitle className="text-[22px]">{u.title}</CardTitle>
-                </CardHeader>
-              </Card>
+                  </p>
+                  <p className="mt-2 line-clamp-3 text-base leading-snug font-bold text-[#222222]">
+                    {u.title}
+                  </p>
+                </div>
+              </Link>
             ))}
-            <Card>
-              <CardHeader className="flex flex-col gap-2">
-                <Badge variant="secondary" className="w-fit uppercase">
-                  Education · 2026
-                </Badge>
-                <CardTitle className="text-[22px]">
-                  New intake open at IPMI, RAD Indonesia and BNC
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-base leading-[1.33] font-normal text-[#303030]">
-                  Contact the delivery partners directly for schedules, fees and enrolment.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

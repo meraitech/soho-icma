@@ -19,7 +19,7 @@ export default function ContactPage() {
         intro="Reach the ICMA Indonesia branch secretariat or any board officer directly."
       />
       <section className="bg-white">
-        <div className="mx-auto grid max-w-[1024px] gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-5">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-5">
           <div id="board" className="scroll-mt-24 lg:col-span-3">
             <h2 className="text-[28px] font-bold tracking-[0px] text-[#222222]">CMA Indonesia Branch</h2>
             <div className="mt-4 grid gap-6 sm:grid-cols-2">

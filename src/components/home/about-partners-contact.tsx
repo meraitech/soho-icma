@@ -4,7 +4,7 @@ import { partners } from "@/data/site";
 export function Partners() {
   return (
     <section id="partners" className="bg-white">
-      <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <p className="text-sm font-bold tracking-[0px] text-[#00539d] uppercase">
           Delivery partners
         </p>

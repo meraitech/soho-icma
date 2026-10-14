@@ -14,7 +14,7 @@ export default function CfoAwardPage() {
         intro="Celebrating Indonesia's outstanding chief financial officers and finance leaders."
       />
       <section className="bg-white">
-        <div className="mx-auto grid max-w-[1024px] gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2">
           <div>
             <span className="flex size-14 items-center justify-center rounded-none bg-[#090d46] text-[#ffd400]">
               <Trophy className="size-8" />

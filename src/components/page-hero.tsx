@@ -11,7 +11,7 @@ export default function PageHero({
 }) {
   return (
     <section className="bg-[#090d46] text-white">
-      <div className="px-4 py-16 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-16">
         <p className="text-sm font-bold tracking-[0px] text-[#ffd400] uppercase">
           {eyebrow}
         </p>

@@ -51,7 +51,7 @@ export default function MembershipPage() {
         intro="Join a premier body of professionals practising the science of management accounting."
       />
       <section className="bg-white">
-        <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="grid gap-6 md:grid-cols-3">
             {tiers.map((t) => (
               <Card key={t.title}>

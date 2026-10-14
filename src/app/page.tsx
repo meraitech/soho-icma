@@ -7,9 +7,12 @@ import { Partners } from "@/components/home/about-partners-contact";
 export default function Home() {
   return (
     <>
+
       <HomeHero />
-      <AudienceTabs />
-      <LatestUpdates />
+      <div className="grid sm:pb-32 pb-24 gap-12 sm:gap-16 ">
+        <AudienceTabs />
+        <LatestUpdates />
+      </div>
       <Spotlight />
       <Partners />
     </>

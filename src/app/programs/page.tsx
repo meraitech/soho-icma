@@ -35,7 +35,7 @@ export default function ProgramsPage() {
         intro="Qualified via the IMAC-accredited education and training programme delivered by ICMA (ANZ)."
       />
       <section className="bg-white">
-        <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="grid gap-6 md:grid-cols-2">
             {stages.map((s, i) => (
               <Card key={s.title}>

@@ -59,6 +59,7 @@ export type Update = {
   href: string;
   category: string;
   date: string;
+  image: string;
 };
 
 export const latestUpdates: Update[] = [
@@ -67,24 +68,32 @@ export const latestUpdates: Update[] = [
     href: "/announcements",
     category: "Branch News",
     date: "2026",
+    image:
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "CMA Batch 19 Intensive Face-to-Face Program Completed",
     href: "/announcements",
     category: "Education",
     date: "2026",
+    image:
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "CFO Award 2026 — nominations now open",
     href: "/cfo-award",
     category: "Awards",
     date: "2026",
+    image:
+      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Upcoming webinar schedule — reserve your seat",
     href: "/events",
     category: "Events",
     date: "2026",
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -214,6 +223,7 @@ export type AudienceCard = {
   text: string;
   cta?: string;
   href?: string;
+  image?: string;
 };
 
 export type AudienceTab = {
@@ -239,6 +249,16 @@ export const audienceTabs: AudienceTab[] = [
         text: "An international credential for practitioners turning insight into strategy.",
         cta: "How it works",
         href: "/contact",
+        image:
+          "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Starting the CGBA",
+        text: "Routes, eligibility and intakes via the secretariat.",
+      },
+      {
+        title: "Explore the benefits of a CGBA",
+        text: "Global recognition for finance professionals.",
       },
       {
         title: "Who it's for",
@@ -247,6 +267,14 @@ export const audienceTabs: AudienceTab[] = [
       {
         title: "How to start",
         text: "Enquire with the secretariat for routes and intakes.",
+      },
+      {
+        title: "Go further with CGBA",
+        text: "Seminars, CPD and a network across five continents.",
+        cta: "Enquire",
+        href: "/contact",
+        image:
+          "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
       },
     ],
     footerCta: { label: "Enquire about CGBA", href: "/contact" },
@@ -263,6 +291,16 @@ export const audienceTabs: AudienceTab[] = [
         text: "Strategic management accounting, face-to-face and online.",
         cta: "Explore programs",
         href: "/programs",
+        image:
+          "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Starting the CMA",
+        text: "Entry routes for graduates and professionals.",
+      },
+      {
+        title: "Explore the benefits of a CMA",
+        text: "Flagship designation for strategy and leadership.",
       },
       {
         title: "Entry routes",
@@ -271,6 +309,14 @@ export const audienceTabs: AudienceTab[] = [
       {
         title: "Delivered locally",
         text: "IPMI, RAD Indonesia and BNC across Indonesia.",
+      },
+      {
+        title: "Study your way",
+        text: "Face-to-face intensives and online support.",
+        cta: "Apply",
+        href: "/contact",
+        image:
+          "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80",
       },
     ],
     footerCta: { label: "Apply for the program", href: "/contact" },
@@ -287,6 +333,16 @@ export const audienceTabs: AudienceTab[] = [
         text: "Live sessions with practitioners and academics.",
         cta: "Reserve a seat",
         href: "/events",
+        image:
+          "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Starting with events",
+        text: "CPD-eligible sessions, year-round.",
+      },
+      {
+        title: "Explore the benefits of events",
+        text: "Learn and connect with peers.",
       },
       {
         title: "CFO Award Night 2026",
@@ -295,6 +351,14 @@ export const audienceTabs: AudienceTab[] = [
       {
         title: "Past highlights",
         text: "Batch 19 intensive program and AGM 2026.",
+      },
+      {
+        title: "Join the next gathering",
+        text: "Webinars, intensives and award nights.",
+        cta: "View all",
+        href: "/events",
+        image:
+          "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80",
       },
     ],
     footerCta: { label: "View all events", href: "/events" },
@@ -311,6 +375,16 @@ export const audienceTabs: AudienceTab[] = [
         text: "Seminars and a global network across five continents.",
         cta: "Membership",
         href: "/membership",
+        image:
+          "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
+      },
+      {
+        title: "Starting as a member",
+        text: "Branch activities and study support.",
+      },
+      {
+        title: "Explore the benefits of membership",
+        text: "CPD, seminars and global connections.",
       },
       {
         title: "Stay qualified",
@@ -319,6 +393,14 @@ export const audienceTabs: AudienceTab[] = [
       {
         title: "Get support",
         text: "Study options and a secretariat that answers.",
+      },
+      {
+        title: "Belong and grow",
+        text: "Development for CMAs across Indonesia.",
+        cta: "Resources",
+        href: "/membership",
+        image:
+          "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80",
       },
     ],
     footerCta: { label: "Member resources", href: "/membership" },

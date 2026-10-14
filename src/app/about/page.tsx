@@ -14,7 +14,7 @@ export default function AboutPage() {
         intro="The Indonesia branch of the Institute of Certified Management Accountants (Australia & New Zealand)."
       />
       <section className="bg-white">
-        <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="flex max-w-3xl flex-col gap-5 text-base leading-[1.33] font-normal text-[#303030]">
             {aboutParagraphs.map((p) => (
               <p key={p.slice(0, 24)}>{p}</p>

@@ -36,7 +36,7 @@ export default function EventsPage() {
         intro="Upcoming CPD-eligible sessions and highlights from past branch events."
       />
       <section className="bg-white">
-        <div className="mx-auto max-w-[1024px] px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <h2 className="text-[28px] font-bold tracking-[0px] text-[#222222]">Upcoming</h2>
           <div className="mt-4 grid gap-6 md:grid-cols-2">
             {upcoming.map((e) => (
