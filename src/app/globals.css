@@ -1,26 +1,205 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Approved exception to DESIGN.md §3: Inter replaces Avenir (no licensed webfont) */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Canonical DESIGN.md tokens */
+  --color-canvas: #090d46;
+  --color-canvas-deep: #050724;
+  --color-canvas-line: #272a5c;
+  --color-brand-core: #00539d;
+  --color-electric: #0a5cc7;
+  --color-electric-deep: #084697;
+  --color-focus-blue: #0764dd;
+  --color-highlight: #ffd400;
+  --color-surface-alt: #f7f7f7;
+  --color-body-dark: #e6f1ff;
+  --color-muted-custom: #767676;
+  --color-faint: #303030;
+  --color-on-primary: #222222;
+  --color-accent-1: #0000ee;
+  --color-accent-4: #7b868c;
+  --color-accent-5: #0230ff;
+  --color-neutral-1: #444444;
+
+  /* Compat ramps — remapped to DESIGN.md palette (replaces old red/ink/gold) */
+  --color-brand-50: #e6f1ff;
+  --color-brand-100: #c9dff5;
+  --color-brand-200: #75acff;
+  --color-brand-300: #4d94f0;
+  --color-brand-400: #1a76e0;
+  --color-brand-500: #0a5cc7;
+  --color-brand-600: #00539d;
+  --color-brand-700: #084697;
+  --color-brand-800: #0b2a6b;
+  --color-brand-900: #090d46;
+  --color-brand-950: #050724;
+
+  --color-ink-50: #f9fcfd;
+  --color-ink-100: #e8eaeb;
+  --color-ink-200: #d6d9da;
+  --color-ink-300: #9aabc3;
+  --color-ink-400: #6b829f;
+  --color-ink-500: #43587a;
+  --color-ink-600: #2f3f5c;
+  --color-ink-700: #272a5c;
+  --color-ink-800: #1a2060;
+  --color-ink-900: #0f144d;
+  --color-ink-950: #090d46;
+
+  --color-gold-50: #fff8d6;
+  --color-gold-100: #ffef9e;
+  --color-gold-200: #ffe45c;
+  --color-gold-300: #ffd400;
+  --color-gold-400: #ffd400;
+  --color-gold-500: #e6bf00;
+  --color-gold-600: #b98a1f;
+  --color-gold-700: #755815;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-heading);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #ffffff;
+  --foreground: #222222;
+  --card: #ffffff;
+  --card-foreground: #303030;
+  --popover: #ffffff;
+  --popover-foreground: #222222;
+  --primary: #090d46;
+  --primary-foreground: #ffffff;
+  --secondary: #f7f7f7;
+  --secondary-foreground: #222222;
+  --muted: #f7f7f7;
+  --muted-foreground: #767676;
+  --accent: #0a5cc7;
+  --accent-foreground: #ffffff;
+  --destructive: #b00020;
+  --border: #d6d9da;
+  --input: #c8c8c8;
+  --ring: #0a5cc7;
+  --chart-1: #00539d;
+  --chart-2: #0a5cc7;
+  --chart-3: #ffd400;
+  --chart-4: #7b868c;
+  --chart-5: #444444;
+  --radius: 0px;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #222222;
+  --sidebar-primary: #090d46;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f7f7f7;
+  --sidebar-accent-foreground: #222222;
+  --sidebar-border: #d6d9da;
+  --sidebar-ring: #0a5cc7;
+}
+
+.dark {
+  --background: #090d46;
+  --foreground: #ffffff;
+  --card: #0f144d;
+  --card-foreground: #ffffff;
+  --popover: #0f144d;
+  --popover-foreground: #ffffff;
+  --primary: #ffd400;
+  --primary-foreground: #090d46;
+  --secondary: #1a2060;
+  --secondary-foreground: #ffffff;
+  --muted: #1a2060;
+  --muted-foreground: #e6f1ff;
+  --accent: #0a5cc7;
+  --accent-foreground: #ffffff;
+  --destructive: #ff6b6b;
+  --border: #272a5c;
+  --input: #2f3f5c;
+  --ring: #75acff;
+  --chart-1: #75acff;
+  --chart-2: #0a5cc7;
+  --chart-3: #ffd400;
+  --chart-4: #7b868c;
+  --chart-5: #e6f1ff;
+  --sidebar: #0f144d;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffd400;
+  --sidebar-primary-foreground: #090d46;
+  --sidebar-accent: #1a2060;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #272a5c;
+  --sidebar-ring: #75acff;
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    @apply font-sans;
+    letter-spacing: 0px;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-heading);
+    letter-spacing: 0px;
+  }
+  /* DESIGN.md §4: mandatory visible focus — blue 2px ring, 3px radius */
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    outline: 2px solid rgba(7, 100, 221, 0.6);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
 }

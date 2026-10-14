@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+  // Allow dev access (incl. HMR) from LAN devices, e.g. http://192.168.100.145:3000
+  allowedDevOrigins: ["192.168.100.145"],
   turbopack: {
     rules: {
       "*.css": {
