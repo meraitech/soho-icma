@@ -250,19 +250,19 @@ export const audienceTabs: AudienceTab[] = [
           "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
       },
       {
-        title: "Starting the CGBA",
+        title: "Eligibility",
         text: "Routes, eligibility and intakes via the secretariat.",
       },
       {
-        title: "Explore the benefits of a CGBA",
+        title: "Global Recognition",
         text: "Global recognition for finance professionals.",
       },
       {
-        title: "Who it's for",
+        title: "Who It's For",
         text: "Practitioners and graduates seeking a global designation.",
       },
       {
-        title: "How to start",
+        title: "How to Start",
         text: "Enquire with the secretariat for routes and intakes.",
       },
       {
@@ -292,19 +292,19 @@ export const audienceTabs: AudienceTab[] = [
           "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
       },
       {
-        title: "Starting the CMA",
+        title: "Eligibility",
         text: "Entry routes for graduates and professionals.",
       },
       {
-        title: "Explore the benefits of a CMA",
+        title: "Why CMA",
         text: "Flagship designation for strategy and leadership.",
       },
       {
-        title: "Entry routes",
+        title: "Entry Routes",
         text: "Open to graduates and professionals.",
       },
       {
-        title: "Delivered locally",
+        title: "Local Delivery",
         text: "IPMI, RAD Indonesia and BNC across Indonesia.",
       },
       {
@@ -334,19 +334,19 @@ export const audienceTabs: AudienceTab[] = [
           "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
       },
       {
-        title: "Starting with events",
+        title: "CPD Sessions",
         text: "CPD-eligible sessions, year-round.",
       },
       {
-        title: "Explore the benefits of events",
+        title: "Why Attend",
         text: "Learn and connect with peers.",
       },
       {
-        title: "CFO Award Night 2026",
+        title: "CFO Award Night",
         text: "Celebrating Indonesia's outstanding CFOs.",
       },
       {
-        title: "Past highlights",
+        title: "Past Highlights",
         text: "Batch 19 intensive program and AGM 2026.",
       },
       {
@@ -376,19 +376,19 @@ export const audienceTabs: AudienceTab[] = [
           "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
       },
       {
-        title: "Starting as a member",
+        title: "Get Started",
         text: "Branch activities and study support.",
       },
       {
-        title: "Explore the benefits of membership",
+        title: "Why Belong",
         text: "CPD, seminars and global connections.",
       },
       {
-        title: "Stay qualified",
+        title: "Stay Qualified",
         text: "Meet CPD hours with branch training and events.",
       },
       {
-        title: "Get support",
+        title: "Get Support",
         text: "Study options and a secretariat that answers.",
       },
       {

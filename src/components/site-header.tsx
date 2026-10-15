@@ -20,7 +20,7 @@ import { mainNav } from "@/data/site";
 
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-[100]">
+    <header className="sticky top-0 z-100">
       <div className="bg-background">
         <div className="flex items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link href="/" className="flex items-center" aria-label="CMA Indonesia — home">
@@ -41,7 +41,7 @@ export default function SiteHeader() {
                 <NavigationMenuItem key={item.label}>
                   <NavigationMenuLink
                     render={<Link href={item.href} />}
-                    className="px-4 text-base font-normal text-foreground hover:bg-highlight/10 hover:text-canvas hover:underline hover:underline-offset-4"
+                    className="px-4 text-base font-normal text-foreground hover:text-canvas hover:underline hover:underline-offset-4"
                   >
                     {item.label}
                   </NavigationMenuLink>
@@ -54,20 +54,20 @@ export default function SiteHeader() {
             <button
               type="button"
               aria-label="Search"
-              className="hidden size-10 items-center justify-center rounded-none text-foreground hover:bg-highlight/10 sm:flex"
+              className="hidden size-10 items-center justify-center rounded-none text-foreground sm:flex"
             >
               <Search className="size-5" />
             </button>
             <Link
               href="/contact"
-              className="hidden rounded-full bg-highlight px-6 py-3 text-base font-bold text-white hover:bg-background hover:text-canvas lg:inline-block"
+              className="hidden rounded-full bg-highlight px-6 py-3 text-base font-bold text-white hover:bg-accent-5 lg:inline-block"
             >
               Apply Now
             </Link>
             <Sheet>
               <SheetTrigger
                 aria-label="Open menu"
-                className="flex size-10 items-center justify-center rounded-none text-foreground hover:bg-highlight/10 lg:hidden"
+                className="flex size-10 items-center justify-center rounded-none text-foreground lg:hidden"
               >
                 <Menu className="size-6" />
               </SheetTrigger>
@@ -83,7 +83,7 @@ export default function SiteHeader() {
                     <SheetClose
                       key={item.label}
                       render={<Link href={item.href} />}
-                      className="rounded-none px-2 py-2.5 text-base font-normal text-foreground hover:bg-highlight/10"
+                      className="rounded-none px-2 py-2.5 text-base font-normal text-foreground"
                     >
                       {item.label}
                     </SheetClose>
@@ -100,7 +100,6 @@ export default function SiteHeader() {
           </div>
         </div>
       </div>
-      <div className="h-1 bg-highlight" aria-hidden="true" />
     </header>
   );
 }

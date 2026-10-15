@@ -35,6 +35,7 @@ colors:
   accent-3: "#C8102E"
   accent-4: "#7B868C"
   accent-5: "#F43F5E"
+  accent-pink: "#FD9C9C"
   neutral-1: "#444444"
 typography:
   display:
@@ -377,6 +378,7 @@ CPA Australia's design system embodies professional authority and institutional 
 - **Deep Red** (`{colors.accent-2}` — `#7F1D1D`): Secondary interactive and feature highlight backgrounds; used in card overlays and button hover states
 - **Premium Red** (`{colors.accent-3}` — `#C8102E`): High-priority call-to-action fills, visual highlights, and emphasis elements
 - **Rose** (`{colors.accent-5}` — `#F43F5E`): Decorative accent, no measured role
+- **Soft Pink** (`{colors.accent-pink}` — `#FD9C9C`): Small-card accent on landing tabs; always paired with dark `#4C0519` text
 - **Slate Grey** (`{colors.accent-4}` — `#7B868C`): Decorative accent, no measured role
 - **Crimson (Decorative)** (`{colors.accent-1}` — `#E11D48`): Decorative accent, no measured role
 
@@ -748,6 +750,7 @@ tokens:
     accent-3: "#C8102E"
     accent-4: "#7B868C"
     accent-5: "#F43F5E"
+    accent-pink: "#FD9C9C"
     canvas: "#4C0519"
     surface-alt: "#F7F7F7"
     ink: "#FFFFFF"

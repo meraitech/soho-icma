@@ -29,8 +29,11 @@
   --color-faint: #303030;
   --color-on-primary: #222222;
   --color-accent-1: #e11d48;
+  --color-accent-2: #7f1d1d;
   --color-accent-4: #7b868c;
   --color-accent-5: #f43f5e;
+  --color-accent-pink: #fd9c9c;
+  --color-accent-pink-deep: #f87171;
   --color-neutral-1: #444444;
 
   /* Compat ramps — remapped to premium red (replaces old navy/yellow) */

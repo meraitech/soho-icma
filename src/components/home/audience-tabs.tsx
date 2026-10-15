@@ -3,12 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Globe, GraduationCap, Users, type LucideIcon } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { audienceTabs, type AudienceCard, type AudienceTab } from "@/data/site";
 
@@ -19,30 +13,39 @@ const tabIcons: Record<AudienceTab["id"], LucideIcon> = {
   members: Users,
 };
 
-function SmallCard({ card, className }: { card: AudienceCard; className?: string }) {
+type SmallTone = "electric" | "deep" | "pink" | "white";
+
+const smallTones: Record<SmallTone, string> = {
+  electric: "bg-electric text-white hover:bg-electric-deep",
+  deep: "bg-accent-2 text-white hover:bg-electric-deep",
+  pink: "bg-accent-pink text-canvas hover:bg-accent-pink-deep",
+  white: "bg-white text-canvas hover:bg-surface-alt",
+};
+
+function SmallCard({
+  card,
+  icon: Icon,
+  tone = "electric",
+}: {
+  card: AudienceCard;
+  icon: LucideIcon;
+  tone?: SmallTone;
+}) {
   return (
-    <Card className={`aspect-square rounded-none ${className ?? ""}`}>
-      <CardHeader>
-        <CardTitle className="line-clamp-3">{card.title}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex flex-1 flex-col gap-4">
-        <p className="line-clamp-4 text-base leading-[1.33] font-normal text-faint">{card.text}</p>
-        {card.cta && card.href ? (
-          <Link
-            href={card.href}
-            className="mt-auto inline-flex w-fit items-center gap-1 text-base font-bold text-canvas hover:text-electric hover:underline"
-          >
-            {card.cta} <ArrowRight className="size-4" />
-          </Link>
-        ) : null}
-      </CardContent>
-    </Card>
+    <div
+      className={`flex flex-col justify-start gap-4 rounded-none border-0 p-6 transition-colors min-[520px]:aspect-square sm:p-8 md:gap-4 md:p-6 lg:gap-6 lg:p-10 ${smallTones[tone]}`}
+    >
+      <Icon className="size-8 shrink-0 sm:size-10 md:size-8 lg:size-10" aria-hidden />
+      <h3 className="line-clamp-3 font-heading text-lg leading-[1.25] font-bold tracking-[0px] sm:text-[22px] md:text-lg lg:text-[22px]">
+        {card.title}
+      </h3>
+    </div>
   );
 }
 
-function FeatureCard({ card }: { card: AudienceCard }) {
+function FeatureCard({ card, className }: { card: AudienceCard; className?: string }) {
   return (
-    <div className="relative aspect-square overflow-hidden rounded-none bg-canvas text-white">
+    <div className={`relative aspect-square overflow-hidden rounded-none bg-canvas text-white ${className ?? ""}`}>
       {card.image ? (
         <Image
           src={card.image}
@@ -54,10 +57,10 @@ function FeatureCard({ card }: { card: AudienceCard }) {
         />
       ) : null}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" aria-hidden />
-      <div className="relative flex h-full flex-col justify-end gap-4 p-6 sm:p-8">
+      <div className="relative flex h-full flex-col justify-end gap-3 p-6 lg:gap-4 lg:p-8">
         <div>
-          <h3 className="text-[28px] leading-[1.14] font-bold tracking-[0px]">{card.title}</h3>
-          <p className="mt-2 max-w-md text-lg leading-[1.33] font-light text-white">{card.text}</p>
+          <h3 className="text-[22px] leading-[1.14] font-bold tracking-[0px] md:text-2xl lg:text-[28px]">{card.title}</h3>
+          <p className="mt-2 max-w-md text-base leading-[1.33] font-light text-white lg:text-lg">{card.text}</p>
         </div>
         {card.cta && card.href ? (
           <Link
@@ -85,29 +88,30 @@ function Bento({ tab }: { tab: AudienceTab }) {
       : [tab.cards[0], tab.cards[1], tab.cards[2], tab.cards[1], tab.cards[2], tab.cards[0]];
 
   const mirrored = tab.id === "cma" || tab.id === "members";
+  const Icon = tabIcons[tab.id];
 
   const leftSmalls = (
-    <div className="grid grid-cols-2 gap-6">
-      <SmallCard card={smallLeft1} />
-      <SmallCard card={smallLeft2} />
+    <div className={`grid grid-cols-1 gap-4 min-[520px]:grid-cols-2 lg:gap-6 ${mirrored ? "order-2 md:order-1" : "order-2"}`}>
+      <SmallCard card={smallLeft1} icon={Icon} tone="pink" />
+      <SmallCard card={smallLeft2} icon={Icon} tone="electric" />
     </div>
   );
   const rightSmalls = (
-    <div className="grid grid-cols-2 gap-6">
-      <SmallCard card={smallRight1} />
-      <SmallCard card={smallRight2} />
+    <div className={`grid grid-cols-1 gap-4 min-[520px]:grid-cols-2 lg:gap-6 ${mirrored ? "order-2" : "order-2 md:order-1"}`}>
+      <SmallCard card={smallRight1} icon={Icon} tone="white" />
+      <SmallCard card={smallRight2} icon={Icon} tone="electric" />
     </div>
   );
 
   return (
-    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-      <div className="flex flex-col gap-6">
-        {mirrored ? leftSmalls : <FeatureCard card={featureLeft} />}
-        {mirrored ? <FeatureCard card={featureLeft} /> : leftSmalls}
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-6">
+      <div className="flex flex-col gap-4 lg:gap-6">
+        <FeatureCard card={featureLeft} className={mirrored ? "order-1 md:order-2" : "order-1"} />
+        {leftSmalls}
       </div>
-      <div className="flex flex-col gap-6">
-        {mirrored ? <FeatureCard card={featureRight} /> : rightSmalls}
-        {mirrored ? rightSmalls : <FeatureCard card={featureRight} />}
+      <div className="flex flex-col gap-4 lg:gap-6">
+        <FeatureCard card={featureRight} className={mirrored ? "order-1" : "order-1 md:order-2"} />
+        {rightSmalls}
       </div>
     </div>
   );
