@@ -18,15 +18,15 @@ export default function ContactPage() {
         title="Get in touch"
         intro="Reach the ICMA Indonesia branch secretariat or any board officer directly."
       />
-      <section className="bg-white">
+      <section className="bg-background">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-5">
           <div id="board" className="scroll-mt-24 lg:col-span-3">
-            <h2 className="text-[28px] font-bold tracking-[0px] text-[#222222]">CMA Indonesia Branch</h2>
+            <h2 className="text-[28px] font-bold tracking-[0px] text-foreground">CMA Indonesia Branch</h2>
             <div className="mt-4 grid gap-6 sm:grid-cols-2">
               {officers.map((o) => (
                 <Card key={o.email}>
                   <CardHeader>
-                    <p className="text-xs font-bold tracking-[0px] text-[#00539d] uppercase">
+                    <p className="text-xs font-bold tracking-[0px] text-brand-core uppercase">
                       {o.role}
                     </p>
                     <CardTitle className="text-lg">{o.name}</CardTitle>
@@ -34,7 +34,7 @@ export default function ContactPage() {
                   <CardContent>
                     <a
                       href={`mailto:${o.email}`}
-                      className="inline-flex items-center gap-1.5 text-sm break-all text-[#767676] hover:text-[#0a5cc7] hover:underline"
+                      className="inline-flex items-center gap-1.5 text-sm break-all text-muted-foreground hover:text-electric hover:underline"
                     >
                       <Mail className="size-4 shrink-0" /> {o.email}
                     </a>
@@ -46,12 +46,12 @@ export default function ContactPage() {
 
           <div className="lg:col-span-2">
             <form
-              className="rounded-none bg-[#090d46] p-8 text-white"
+              className="rounded-none bg-canvas p-8 text-white"
               action="mailto:anasopanah@gmail.com"
               method="post"
             >
               <h2 className="text-lg font-bold tracking-[0px]">Send an enquiry</h2>
-              <p className="mt-1 text-sm font-normal text-[#e6f1ff]">
+              <p className="mt-1 text-sm font-normal text-body-dark">
                 Membership, programs, events or partnerships.
               </p>
               <FieldGroup className="mt-5">

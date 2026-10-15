@@ -26,11 +26,11 @@ function SmallCard({ card, className }: { card: AudienceCard; className?: string
         <CardTitle className="line-clamp-3">{card.title}</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-4">
-        <p className="line-clamp-4 text-base leading-[1.33] font-normal text-[#303030]">{card.text}</p>
+        <p className="line-clamp-4 text-base leading-[1.33] font-normal text-faint">{card.text}</p>
         {card.cta && card.href ? (
           <Link
             href={card.href}
-            className="mt-auto inline-flex w-fit items-center gap-1 text-base font-bold text-[#090d46] hover:text-[#0a5cc7] hover:underline"
+            className="mt-auto inline-flex w-fit items-center gap-1 text-base font-bold text-canvas hover:text-electric hover:underline"
           >
             {card.cta} <ArrowRight className="size-4" />
           </Link>
@@ -42,7 +42,7 @@ function SmallCard({ card, className }: { card: AudienceCard; className?: string
 
 function FeatureCard({ card }: { card: AudienceCard }) {
   return (
-    <div className="relative aspect-square overflow-hidden rounded-none bg-[#090d46] text-white">
+    <div className="relative aspect-square overflow-hidden rounded-none bg-canvas text-white">
       {card.image ? (
         <Image
           src={card.image}
@@ -62,7 +62,7 @@ function FeatureCard({ card }: { card: AudienceCard }) {
         {card.cta && card.href ? (
           <Link
             href={card.href}
-            className="inline-flex w-fit items-center gap-1 rounded-full bg-[#ffd400] px-6 py-3 text-base font-bold text-[#090d46] hover:bg-white"
+            className="inline-flex w-fit items-center gap-1 rounded-full bg-highlight px-6 py-3 text-base font-bold text-white hover:bg-background hover:text-canvas"
           >
             {card.cta} <ArrowRight className="size-4" />
           </Link>
@@ -115,10 +115,10 @@ function Bento({ tab }: { tab: AudienceTab }) {
 
 export default function AudienceTabs() {
   return (
-    <section>
+    <section className="bg-canvas text-white">
       <div className="w-full ">
         <Tabs defaultValue="cgba">
-          <div className="border-b border-ink-200 flex justify-center">
+          <div className="flex justify-center border-b border-canvas-line">
             <TabsList
               variant="line"
               className="px-4 sm:px-6 grid-cols-4 mx-auto max-w-6xl w-full"
@@ -129,7 +129,7 @@ export default function AudienceTabs() {
                   <TabsTrigger
                     key={t.id}
                     value={t.id}
-                    className="flex-col border-x-0 border-t-0 border-b-3 border-transparent px-2 py-4 whitespace-normal text-[#767676] after:hidden hover:text-[#090d46] data-active:border-[#ffd400] data-active:bg-transparent data-active:text-[#090d46]"
+                    className="flex-col border-x-0 border-t-0 border-b-3 border-transparent px-2 py-4 whitespace-normal text-white/70 after:hidden hover:text-white data-active:border-highlight data-active:bg-transparent data-active:text-white"
                   >
                     <Icon className="size-10" aria-hidden />
                     <span className="text-sm font-bold">{t.label}</span>

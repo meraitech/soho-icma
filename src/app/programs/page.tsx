@@ -34,7 +34,7 @@ export default function ProgramsPage() {
         title="Education Programs"
         intro="Qualified via the IMAC-accredited education and training programme delivered by ICMA (ANZ)."
       />
-      <section className="bg-white">
+      <section className="bg-background">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="grid gap-6 md:grid-cols-2">
             {stages.map((s, i) => (
@@ -46,13 +46,13 @@ export default function ProgramsPage() {
                   <CardTitle>{s.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-base leading-[1.33] font-normal text-[#303030]">{s.text}</p>
+                  <p className="text-base leading-[1.33] font-normal text-faint">{s.text}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <h2 className="mt-14 text-[28px] font-bold tracking-[0px] text-[#222222]">Delivered in Indonesia by</h2>
+          <h2 className="mt-14 text-[28px] font-bold tracking-[0px] text-foreground">Delivered in Indonesia by</h2>
           <div className="mt-4 grid gap-6 md:grid-cols-3">
             {partners.map((p) => (
               <a
@@ -64,10 +64,10 @@ export default function ProgramsPage() {
               >
                 <Card className="h-full">
                   <CardHeader>
-                    <CardTitle className="group-hover:text-[#0a5cc7]">{p.name}</CardTitle>
+                    <CardTitle className="group-hover:text-electric">{p.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-base font-normal text-[#303030]">{p.description}</p>
+                    <p className="text-base font-normal text-faint">{p.description}</p>
                   </CardContent>
                 </Card>
               </a>
@@ -76,7 +76,7 @@ export default function ProgramsPage() {
 
           <Link
             href="/contact"
-            className="mt-10 inline-flex items-center gap-1 rounded-full bg-[#ffd400] px-6 py-3 text-base font-bold text-[#090d46] hover:bg-[#090d46] hover:text-white"
+            className="mt-10 inline-flex items-center gap-1 rounded-full bg-highlight px-6 py-3 text-base font-bold text-white hover:bg-canvas hover:text-white"
           >
             Apply for the program <ArrowRight className="size-4" />
           </Link>

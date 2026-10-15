@@ -22,19 +22,19 @@ export default function GalleryPage() {
         title="ICMA Indonesia Picture Gallery"
         intro="Moments from branch programs, gatherings and ceremonies."
       />
-      <section className="bg-white">
+      <section className="bg-background">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {shots.map((title) => (
               <Card key={title} className="overflow-hidden py-0">
-                <Skeleton className="h-52 rounded-none bg-[#f7f7f7]" aria-label={title} />
+                <Skeleton className="h-52 rounded-none bg-surface-alt" aria-label={title} />
                 <CardHeader>
                   <CardTitle className="text-base">{title}</CardTitle>
                 </CardHeader>
               </Card>
             ))}
           </div>
-          <p className="mt-8 text-sm font-normal text-[#767676]">
+          <p className="mt-8 text-sm font-normal text-muted-foreground">
             Gallery photos are placeholders — send the branch photo set and each tile will be
             swapped for the real image with its caption.
           </p>

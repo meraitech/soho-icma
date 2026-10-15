@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Menu, Search, User } from "lucide-react";
+import { Menu, Search } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -15,45 +16,23 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { mainNav, site, utilityNav } from "@/data/site";
+import { mainNav } from "@/data/site";
 
 export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-[100]">
-      <div className="bg-[#090d46] text-white">
-        <div className="flex items-center justify-between px-4 py-1.5 text-xs sm:px-6">
-          <p className="hidden truncate text-[#e6f1ff]/70 sm:block">{site.tagline}</p>
-          <p className="truncate text-[#e6f1ff]/70 sm:hidden">ICMA Indonesia Branch</p>
-          <nav className="flex items-center gap-4" aria-label="Utility">
-            {utilityNav.map((item) => (
-              <Link key={item.label} href={item.href} className="text-[#e6f1ff]/70 hover:bg-[rgba(115,133,159,0.5)] hover:text-white">
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              href="/contact"
-              className="hidden items-center gap-1 font-bold text-white hover:bg-[rgba(115,133,159,0.5)] sm:flex"
-            >
-              <User className="size-3.5" /> Member Login
-            </Link>
-          </nav>
-        </div>
-      </div>
-
-      <div className="bg-white">
+      <div className="bg-background">
         <div className="flex items-center justify-between gap-4 px-4 py-3 sm:px-6">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="flex size-11 items-center justify-center rounded-none bg-[#090d46] text-lg font-bold text-white">
-              CMA
-            </span>
-            <span className="leading-tight">
-              <span className="block text-lg font-bold tracking-[0px] text-[#222222]">
-                CMA Indonesia
-              </span>
-              <span className="block text-[11px] font-normal tracking-wide text-[#767676]">
-                Certified Management Accountants
-              </span>
-            </span>
+          <Link href="/" className="flex items-center" aria-label="CMA Indonesia — home">
+            <Image
+              src="/icma/logo.webp"
+              alt="CMA Indonesia"
+              width={600}
+              height={247}
+              priority
+              className="h-10 w-auto sm:h-11"
+              sizes="(max-width: 640px) 240px, 300px"
+            />
           </Link>
 
           <NavigationMenu className="hidden lg:flex">
@@ -62,7 +41,7 @@ export default function SiteHeader() {
                 <NavigationMenuItem key={item.label}>
                   <NavigationMenuLink
                     render={<Link href={item.href} />}
-                    className="px-4 text-base font-normal text-[#222222] hover:bg-[rgba(115,133,159,0.5)] hover:text-[#090d46] hover:underline hover:underline-offset-4"
+                    className="px-4 text-base font-normal text-foreground hover:bg-highlight/10 hover:text-canvas hover:underline hover:underline-offset-4"
                   >
                     {item.label}
                   </NavigationMenuLink>
@@ -75,24 +54,24 @@ export default function SiteHeader() {
             <button
               type="button"
               aria-label="Search"
-              className="hidden size-10 items-center justify-center rounded-none text-[#222222] hover:bg-[rgba(115,133,159,0.5)] sm:flex"
+              className="hidden size-10 items-center justify-center rounded-none text-foreground hover:bg-highlight/10 sm:flex"
             >
               <Search className="size-5" />
             </button>
             <Link
               href="/contact"
-              className="hidden rounded-full bg-[#ffd400] px-6 py-3 text-base font-bold text-[#090d46] hover:bg-white hover:text-[#090d46] lg:inline-block"
+              className="hidden rounded-full bg-highlight px-6 py-3 text-base font-bold text-white hover:bg-background hover:text-canvas lg:inline-block"
             >
               Apply Now
             </Link>
             <Sheet>
               <SheetTrigger
                 aria-label="Open menu"
-                className="flex size-10 items-center justify-center rounded-none text-[#222222] hover:bg-[rgba(115,133,159,0.5)] lg:hidden"
+                className="flex size-10 items-center justify-center rounded-none text-foreground hover:bg-highlight/10 lg:hidden"
               >
                 <Menu className="size-6" />
               </SheetTrigger>
-              <SheetContent side="right" className="bg-white">
+              <SheetContent side="right" className="bg-background">
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
                   <SheetDescription className="sr-only">
@@ -104,14 +83,14 @@ export default function SiteHeader() {
                     <SheetClose
                       key={item.label}
                       render={<Link href={item.href} />}
-                      className="rounded-none px-2 py-2.5 text-base font-normal text-[#222222] hover:bg-[rgba(115,133,159,0.5)]"
+                      className="rounded-none px-2 py-2.5 text-base font-normal text-foreground hover:bg-highlight/10"
                     >
                       {item.label}
                     </SheetClose>
                   ))}
                   <SheetClose
                     render={<Link href="/contact" />}
-                    className="mt-2 rounded-full bg-[#ffd400] px-6 py-3 text-center text-base font-bold text-[#090d46]"
+                    className="mt-2 rounded-full bg-highlight px-6 py-3 text-center text-base font-bold text-white"
                   >
                     Apply Now
                   </SheetClose>
@@ -121,7 +100,7 @@ export default function SiteHeader() {
           </div>
         </div>
       </div>
-      <div className="h-1 bg-[#ffd400]" aria-hidden="true" />
+      <div className="h-1 bg-highlight" aria-hidden="true" />
     </header>
   );
 }

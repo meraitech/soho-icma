@@ -4,14 +4,14 @@ name: Cpaaustralia
 description: |
   CPA Australia's design system embodies professional authority and
   institutional trust through a bold, high-contrast colour strategy anchored in
-  deep navy and striking brand accents. The visual language combines corporate
-  formality with moments of vibrant optimism—particularly through the use of
-  bright yellow and electric blue—creating a sense of progressive financial
+  deep maroon and striking premium red accents. The visual language combines corporate
+  formality with moments of vibrant confidence—particularly through the use of
+  premium red—creating a sense of progressive financial
   expertise. The system leverages generous whitespace, clean typography in
   Avenir, and sharp, unrounded edges (except for pill-shaped call-to-action
   buttons) to convey precision and clarity. Dark hero sections with full-bleed
   imagery establish hierarchy, while alternating light bands and strategic use
-  of the brand's navy canvas create rhythm across long pages. The overall mood
+  of the brand's maroon canvas create rhythm across long pages. The overall mood
   is confident, accessible, and forward-thinking—designed to inspire members and
   position CPA Australia as a leader in accounting and finance.
 source:
@@ -20,21 +20,21 @@ source:
   extractedAt: 2026-10-13
   tokensMeasured: true
 colors:
-  primary: "#DDDDDD"
-  accent: "#00539D"
-  canvas: "#090D46"
+  primary: "#C8102E"
+  accent: "#9E1B32"
+  canvas: "#4C0519"
   surface-alt: "#F7F7F7"
   on-primary: "#222222"
   ink: "#FFFFFF"
-  body: "#E6F1FF"
+  body: "#FFE4E6"
   muted: "#767676"
   faint: "#303030"
-  error: "#151B17"
-  accent-1: "#0000EE"
-  accent-2: "#0A5CC7"
-  accent-3: "#FFD400"
+  error: "#B00020"
+  accent-1: "#E11D48"
+  accent-2: "#7F1D1D"
+  accent-3: "#C8102E"
   accent-4: "#7B868C"
-  accent-5: "#0230FF"
+  accent-5: "#F43F5E"
   neutral-1: "#444444"
 typography:
   display:
@@ -167,20 +167,20 @@ themes:
     text: "#101418"
     textMuted: "#686B6E"
     border: "#D6D9DA"
-    accent: "#00539D"
+    accent: "#9E1B32"
     accentFg: "#FFFFFF"
-    focusRing: "#00539D"
+    focusRing: "#9E1B32"
     elevation: shadow
   dark:
-    bg: "#090D46"
+    bg: "#4C0519"
     surface: "#F7F7F7"
     surfaceRaised: "#F8F8F8"
     text: "#FFFFFF"
-    textMuted: "#E6F1FF"
-    border: "#272A5C"
-    accent: "#0069C6"
+    textMuted: "#FFE4E6"
+    border: "#7F1D22"
+    accent: "#C8102E"
     accentFg: "#FFFFFF"
-    focusRing: "#00539D"
+    focusRing: "#9E1B32"
     elevation: "border+surface"
   contrastFailures:
     - "dark: text on surface = 1.07:1 (needs 4.5:1)"
@@ -201,7 +201,7 @@ components:
     height: 52px
     padding: "12px 24px 12px 24px"
     rounded: "{rounded.full}"
-    backgroundColor: "rgb(255, 221, 0)"
+    backgroundColor: "#C8102E"
   button-filled-2:
     typography: "{typography.button-md-strong}"
     textColor: "{colors.ink}"
@@ -230,7 +230,7 @@ components:
     fontFamily: Avenir
     fontWeight: 400
     lineHeight: 1.75
-    backgroundColor: "rgb(255, 221, 0)"
+    backgroundColor: "#C8102E"
   link-2:
     textColor: "{colors.ink}"
     padding: "24px 24px 24px 24px"
@@ -244,11 +244,11 @@ states:
     target: button
     state: hover
     borderColor: "{colors.ink}"
-    backgroundColor: "rgba(115, 133, 159, 0.5)"
+    backgroundColor: "rgba(200, 16, 46, 0.12)"
   nav-hover:
     target: nav
     state: hover
-    backgroundColor: "rgba(115, 133, 159, 0.5)"
+    backgroundColor: "rgba(200, 16, 46, 0.12)"
   other-focus:
     target: other
     state: focus
@@ -289,7 +289,7 @@ states:
     target: button
     state: focus
     textDecoration: none
-    backgroundColor: "rgb(8, 70, 151)"
+    backgroundColor: "#8F0B1E"
   link-active:
     target: link
     state: active
@@ -351,13 +351,13 @@ coverage:
 
 ## 1. Visual Theme & Atmosphere
 
-CPA Australia's design system embodies professional authority and institutional trust through a bold, high-contrast colour strategy anchored in deep navy and striking brand accents. The visual language combines corporate formality with moments of vibrant optimism—particularly through the use of bright yellow and electric blue—creating a sense of progressive financial expertise. The system leverages generous whitespace, clean typography in Avenir, and sharp, unrounded edges (except for pill-shaped call-to-action buttons) to convey precision and clarity. Dark hero sections with full-bleed imagery establish hierarchy, while alternating light bands and strategic use of the brand's navy canvas create rhythm across long pages. The overall mood is confident, accessible, and forward-thinking—designed to inspire members and position CPA Australia as a leader in accounting and finance.
+CPA Australia's design system embodies professional authority and institutional trust through a bold, high-contrast colour strategy anchored in deep maroon and striking premium red accents. The visual language combines corporate formality with moments of vibrant confidence—particularly through the use of premium red—creating a sense of progressive financial expertise. The system leverages generous whitespace, clean typography in Avenir, and sharp, unrounded edges (except for pill-shaped call-to-action buttons) to convey precision and clarity. Dark hero sections with full-bleed imagery establish hierarchy, while alternating light bands and strategic use of the brand's maroon canvas create rhythm across long pages. The overall mood is confident, accessible, and forward-thinking—designed to inspire members and position CPA Australia as a leader in accounting and finance.
 
 **Key Characteristics**
 
-- **Deep navy canvas** with high-contrast white text for primary content
-- **Vibrant yellow accent** (`#FFD400`) used sparingly for high-priority CTAs and visual highlights
-- **Electric blue accent** (`#0A5CC7`) for secondary interactive states and feature highlights
+- **Deep maroon canvas** with high-contrast white text for primary content
+- **Premium red accent** (`#C8102E`) used sparingly for high-priority CTAs and visual highlights
+- **Deep red accent** (`#7F1D1D`) for secondary interactive states and feature highlights
 - **Sharp, unrounded edges** for cards and containers; pill-shaped (9999px) primary buttons
 - **Avenir sans-serif** throughout, with generous weight variation (300–700) and clean hierarchy
 - **Full-bleed hero sections** with photography and text overlay
@@ -369,23 +369,23 @@ CPA Australia's design system embodies professional authority and institutional 
 
 ### Primary
 
-- **Primary / Brand** (`{colors.primary}` — `#DDDDDD`): Primary CTA fills, brand accent, active state indicators, and secondary button backgrounds
-- **Brand Accent** (`{colors.accent}` — `#00539D`): Core brand blue used in hero bands, navigation accents, and link states
+- **Primary / Brand** (`{colors.primary}` — `#C8102E`): Primary CTA fills, brand accent, active state indicators, and secondary button backgrounds
+- **Brand Accent** (`{colors.accent}` — `#9E1B32`): Core premium red used in hero bands, navigation accents, and link states
 
 ### Accent Colors
 
-- **Electric Blue** (`{colors.accent-2}` — `#0A5CC7`): Secondary interactive and feature highlight backgrounds; used in card overlays and button hover states
-- **Bright Yellow** (`{colors.accent-3}` — `#FFD400`): High-priority call-to-action fills, visual highlights, and emphasis elements
-- **Deep Blue** (`{colors.accent-5}` — `#0230FF`): Decorative accent, no measured role
+- **Deep Red** (`{colors.accent-2}` — `#7F1D1D`): Secondary interactive and feature highlight backgrounds; used in card overlays and button hover states
+- **Premium Red** (`{colors.accent-3}` — `#C8102E`): High-priority call-to-action fills, visual highlights, and emphasis elements
+- **Rose** (`{colors.accent-5}` — `#F43F5E`): Decorative accent, no measured role
 - **Slate Grey** (`{colors.accent-4}` — `#7B868C`): Decorative accent, no measured role
-- **Bright Blue (Decorative)** (`{colors.accent-1}` — `#0000EE`): Decorative accent, no measured role
+- **Crimson (Decorative)** (`{colors.accent-1}` — `#E11D48`): Decorative accent, no measured role
 
 ### Neutral Scale
 
-- **Canvas** (`{colors.canvas}` — `#090D46`): Default page background; primary dark surface
+- **Canvas** (`{colors.canvas}` — `#4C0519`): Default page background; primary dark surface
 - **Surface Alt** (`{colors.surface-alt}` — `#F7F7F7`): Alternating section band; light background for contrast
 - **Ink** (`{colors.ink}` — `#FFFFFF`): Headings and primary text on dark backgrounds
-- **Body** (`{colors.body}` — `#E6F1FF`): Body copy on dark surfaces; light blue-tinted text
+- **Body** (`{colors.body}` — `#FFE4E6`): Body copy on dark surfaces; light rose-tinted text
 - **On Primary** (`{colors.on-primary}` — `#222222`): Label colour on brand/light surfaces
 - **Muted** (`{colors.muted}` — `#767676`): Captions, secondary text, and de-emphasized content
 - **Faint** (`{colors.faint}` — `#303030`): Tertiary text and placeholder text
@@ -393,7 +393,7 @@ CPA Australia's design system embodies professional authority and institutional 
 
 ### Semantic / Status
 
-- **Error** (`{colors.error}` — `#151B17`): Error states and destructive actions
+- **Error** (`{colors.error}` — `#B00020`): Error states and destructive actions
 
 ## 3. Typography Rules
 
@@ -439,46 +439,46 @@ Fallback stack: `'Helvetica Neue', Helvetica, Arial, sans-serif`
 
 ### Buttons
 
-#### Primary (Brand Yellow Fill)
-- **Background:** `{colors.primary}` (`#DDDDDD`)
+#### Primary (Premium Red Fill)
+- **Background:** `{colors.primary}` (`#C8102E`)
 - **Text Colour:** `#FFFFFF`
 - **Padding:** `12px 24px`
 - **Font:** `{typography.button-md-strong}` (16px, weight 700)
 - **Border Radius:** `{rounded.full}` (9999px / pill-shaped)
-- **Border:** `2px solid {colors.primary}` (`#DDDDDD`)
-- **Box Shadow:** `{colors.accent}` (`#00539D`) `0px 0px 0px 0px` (inset accent layer)
-- **Hover:** Background transitions to `rgb(8, 70, 151)` with text `#FFFFFF`; shadow expands
-- **Active:** Border and background both `rgb(10, 92, 199)` (`{colors.accent-2}`); medium outline width
-- **Focus:** Outline `rgba(7, 100, 221, 0.6) solid 2px`; border radius `3px`
+- **Border:** `2px solid {colors.primary}` (`#C8102E`)
+- **Box Shadow:** `{colors.accent}` (`#9E1B32`) `0px 0px 0px 0px` (inset accent layer)
+- **Hover:** Background transitions to `#8F0B1E` with text `#FFFFFF`; shadow expands
+- **Active:** Border and background both `#7F1D1D` (`{colors.accent-2}`); medium outline width
+- **Focus:** Outline `rgba(200, 16, 46, 0.6) solid 2px`; border radius `3px`
 
-#### Secondary (Brand Accent Blue)
-- **Background:** `{colors.accent-2}` (`#0A5CC7`)
+#### Secondary (Deep Red)
+- **Background:** `{colors.accent-2}` (`#7F1D1D`)
 - **Text Colour:** `#FFFFFF`
 - **Padding:** `12px 24px`
 - **Font:** `{typography.button-md-strong}` (16px, weight 700)
 - **Border Radius:** `{rounded.full}` (9999px / pill-shaped)
 - **Border:** `0px none`
-- **Box Shadow:** `{colors.accent}` (`#00539D`) `0px 0px 0px 0px` (flat)
-- **Hover:** Background becomes `rgb(8, 70, 151)` with white text
-- **Active:** Border and background become `rgb(10, 92, 199)` (`{colors.accent-2}`)
-- **Focus:** Outline `rgba(7, 100, 221, 0.6) solid 2px`; border radius `3px`
+- **Box Shadow:** `{colors.accent}` (`#9E1B32`) `0px 0px 0px 0px` (flat)
+- **Hover:** Background becomes `#8F0B1E` with white text
+- **Active:** Border and background become `#7F1D1D` (`{colors.accent-2}`)
+- **Focus:** Outline `rgba(200, 16, 46, 0.6) solid 2px`; border radius `3px`
 
-#### Ghost / Tertiary (Light Yellow)
-- **Background:** `{colors.accent-3}` (`#FFD400`)
-- **Text Colour:** `rgb(9, 13, 70)` (dark navy)
+#### Ghost / Tertiary (Premium Red)
+- **Background:** `{colors.accent-3}` (`#C8102E`)
+- **Text Colour:** `#FFFFFF` (white on premium red)
 - **Padding:** `12px 24px`
 - **Font:** `{typography.button-md-strong}` (16px, weight 700)
 - **Border Radius:** `{rounded.full}` (9999px / pill-shaped)
 - **Border:** `0px none`
-- **Box Shadow:** `rgb(5, 7, 36) 0px 0px 0px 0px` (flat)
-- **Hover:** Background becomes `rgb(255, 255, 255)` with text `rgb(9, 13, 70)`
-- **Active:** Background becomes `rgb(68, 68, 68)` (dark grey)
-- **Focus:** Outline `rgba(7, 100, 221, 0.6) solid 2px`; border radius `3px`
+- **Box Shadow:** `rgb(76, 5, 25) 0px 0px 0px 0px` (flat)
+- **Hover:** Background becomes `rgb(255, 255, 255)` with text `#4C0519`
+- **Active:** Background becomes `#8F0B1E` (deep red)
+- **Focus:** Outline `rgba(200, 16, 46, 0.6) solid 2px`; border radius `3px`
 
 ### Cards & Containers
 
 #### Full-Bleed Hero Card
-- **Background:** `{colors.canvas}` (`#090D46`) — dark navy
+- **Background:** `{colors.canvas}` (`#4C0519`) — deep maroon
 - **Text Colour:** `{colors.ink}` (`#FFFFFF`)
 - **Padding:** `{spacing.xxl}` (`64px`) top and bottom; `0px` sides (full-bleed)
 - **Border Radius:** `{rounded.none}` (0px / sharp)
@@ -513,7 +513,7 @@ Fallback stack: `'Helvetica Neue', Helvetica, Arial, sans-serif`
 - **Font:** `{typography.label}` (14px, weight 400)
 - **Border Radius:** `{rounded.xs}` (3px / subtle round)
 - **Border:** `{border.thin}` (1px) solid `rgb(200, 200, 200)` (light grey)
-- **Focus:** Outline `rgb(10, 92, 199) solid 1px`; border radius `3px`; label becomes blue
+- **Focus:** Outline `#7F1D1D solid 1px`; border radius `3px`; label becomes red
 - **Placeholder:** `{colors.faint}` (`#303030`)
 
 ### Navigation
@@ -524,9 +524,9 @@ Fallback stack: `'Helvetica Neue', Helvetica, Arial, sans-serif`
 - **Padding:** `{spacing.xs}` (`16px`) horizontal
 - **Border Radius:** `{rounded.none}` (0px / no rounding)
 - **Background:** Transparent by default
-- **Hover:** Background becomes `rgba(115, 133, 159, 0.5)` (semi-opaque teal-grey) or `rgba(0, 0, 0, 0.5)` (dark) depending on context
+- **Hover:** Background becomes `rgba(200, 16, 46, 0.12)` (red wash) or `rgba(0, 0, 0, 0.5)` (dark) depending on context
 - **Focus:** Background reset to initial (transparent)
-- **Active:** Underline or background highlight (measured as yellow accent bar on "Members" tab)
+- **Active:** Underline or background highlight (measured as red accent bar on "Members" tab)
 
 #### Menu Toggle (Mobile)
 - **Visible at:** 375px viewport and below (always shown on this extraction)
@@ -536,15 +536,15 @@ Fallback stack: `'Helvetica Neue', Helvetica, Arial, sans-serif`
 ### Links (Standalone / Inline)
 
 #### Default Link (Dark Background)
-- **Text Colour:** `rgb(9, 13, 70)` (dark navy) on yellow background; `{colors.body}` (`#E6F1FF`) on blue background
-- **Background:** `{colors.accent-3}` (`#FFD400`) or `{colors.accent-2}` (`#0A5CC7`)
+- **Text Colour:** `#FFFFFF` (white) on red background; `{colors.body}` (`#FFE4E6`) on maroon background
+- **Background:** `{colors.accent-3}` (`#C8102E`) or `{colors.accent-2}` (`#7F1D1D`)
 - **Padding:** `{spacing.md}` (`24px`)
 - **Font:** `{typography.body-md}` (16px, weight 400)
 - **Border Radius:** `{rounded.none}` (0px / sharp)
 - **Text Decoration:** None by default; underline on hover
 - **Hover:** Background and text may invert or brighten; box-shadow adds emphasis (`0px 0px 0px 3px` outline in white or contrast colour)
-- **Focus:** Outline `rgb(10, 92, 199) solid 1px`; box-shadow `rgb(117, 172, 255) 0px 0px 0px 3px`
-- **Active:** Border and background become `rgb(10, 92, 199)` (`{colors.accent-2}`)
+- **Focus:** Outline `#7F1D1D solid 1px`; box-shadow `rgb(254, 205, 211) 0px 0px 0px 3px`
+- **Active:** Border and background become `#7F1D1D` (`{colors.accent-2}`)
 
 ## 5. Layout Principles
 
@@ -594,19 +594,19 @@ The system embraces **generous negative space** as a core design principle. Hero
 
 ## 6. Depth & Elevation
 
-The system employs a **colour-blocking elevation strategy** rather than layered shadows. Depth is created through contrasting surface colours (dark navy vs. light grey vs. yellow) and shifts in visual plane, not multi-tier shadow systems.
+The system employs a **colour-blocking elevation strategy** rather than layered shadows. Depth is created through contrasting surface colours (deep maroon vs. light grey vs. premium red) and shifts in visual plane, not multi-tier shadow systems.
 
 | Level | Treatment | Use |
 |---|---|---|
 | Flat (Base) | No shadow; `box-shadow: none` | Default cards, sections, hero bands |
 | Accent Underlay | `box-shadow: {colors.accent} 0px 0px 0px 0px` (appears as inset or flat) | Primary buttons, feature highlights |
-| Yellow Accent Shadow | `box-shadow: {colors.accent-3} 0px -4px 0px 0px inset` (inset, bottom edge) | Button emphasis, visual punctuation |
-| Focus Ring | `outline: rgba(7, 100, 221, 0.6) solid 2px; border-radius: 3px` | Interactive focus states |
+| Red Accent Shadow | `box-shadow: {colors.accent-3} 0px -4px 0px 0px inset` (inset, bottom edge) | Button emphasis, visual punctuation |
+| Focus Ring | `outline: rgba(200, 16, 46, 0.6) solid 2px; border-radius: 3px` | Interactive focus states |
 | Hover Lift (Soft Shadow) | `box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px, rgba(0, 0, 0, 0.12) 0px 6px 16px` | Card hover states (rarely used; measured on one card) |
 
 **Elevation Philosophy:**
 
-The system eschews traditional drop-shadow hierarchies in favour of **colour-driven depth**. Surface changes (dark navy to light grey, solid fills to transparent overlays) convey layering more effectively than subtle shadow scales. When shadows do appear (e.g., on card hover), they use low-opacity black (`0.08–0.12`) for restraint. Focus states employ a crisp `2px` outline in blue, not shadow, to signal keyboard navigation. This approach maintains clarity and ensures the design remains accessible at all sizes.
+The system eschews traditional drop-shadow hierarchies in favour of **colour-driven depth**. Surface changes (deep maroon to light grey, solid fills to transparent overlays) convey layering more effectively than subtle shadow scales. When shadows do appear (e.g., on card hover), they use low-opacity black (`0.08–0.12`) for restraint. Focus states employ a crisp `2px` outline in red, not shadow, to signal keyboard navigation. This approach maintains clarity and ensures the design remains accessible at all sizes.
 
 ### Opacity Levels
 
@@ -629,15 +629,15 @@ The stacking order supports sticky navigation, modals, and toast notifications:
 ### Do
 
 - **Use the pill-shaped (9999px) border radius exclusively for primary call-to-action buttons** — they are the visual signature of high-priority actions
-- **Leverage colour-blocking for depth** — shift background colours between sections (navy to light grey to yellow) to create hierarchy without shadows
+- **Leverage colour-blocking for depth** — shift background colours between sections (maroon to light grey to premium red) to create hierarchy without shadows
 - **Maintain full-bleed hero sections** with `64px` padding (top/bottom), bold typography, and background imagery
 - **Apply `16px` body text** (`{typography.body-md}`) as the default for all standard content; scale up to `18px` (`{typography.body-lg}`) only for introductory or feature copy
 - **Use weight contrast (300–700)** to build typographic hierarchy — avoid relying solely on size
 - **Set form inputs to 3px border-radius** (`{rounded.xs}`) and 1px border stroke (`{border.thin}`) for subtle softness against sharp container edges
-- **Pair yellow (`#FFD400`) accents with navy (`#090D46`) backgrounds** for maximum contrast and visual pop
-- **Apply focus outlines** (blue `rgba(7, 100, 221, 0.6) solid 2px`) to all interactive elements for keyboard accessibility
+- **Pair premium red (`#C8102E`) accents with maroon (`#4C0519`) backgrounds** for maximum contrast and visual pop
+- **Apply focus outlines** (red `rgba(200, 16, 46, 0.6) solid 2px`) to all interactive elements for keyboard accessibility
 - **Stick to the spacing scale** (8px increments) — use `24px` for standard padding, `36–48px` for section gaps
-- **Use white text (`#FFFFFF`)** on dark navy canvas; use dark grey (`#222222` or `#303030`) on light surfaces
+- **Use white text (`#FFFFFF`)** on deep maroon canvas; use dark grey (`#222222` or `#303030`) on light surfaces
 
 ### Don't
 
@@ -650,7 +650,7 @@ The stacking order supports sticky navigation, modals, and toast notifications:
 - **Don't mix Avenir with other display fonts** — Helvetica Neue is fallback only; Avenir is the sole declared typeface
 - **Don't omit focus indicators** — every button, link, and input must show a visible focus state for keyboard users
 - **Don't place text directly on photographs without a dark overlay or solid background band** — maintain contrast for readability
-- **Don't use the `#FFD400` yellow** for body text — it is reserved for accent highlights and CTAs; use white or light blue (`#E6F1FF`) for readable text on dark backgrounds
+- **Don't use the `#C8102E` premium red** for body text — it is reserved for accent highlights and CTAs; use white or light rose (`#FFE4E6`) for readable text on dark backgrounds
 
 ## 8. Responsive Behavior
 
@@ -688,36 +688,36 @@ The stacking order supports sticky navigation, modals, and toast notifications:
 
 When implementing layouts, prioritize these semantic mappings:
 
-- **Primary CTA / Brand Accent:** `{colors.primary}` (`#DDDDDD`) — pill-shaped button fills, brand highlights
-- **Secondary / Feature Background:** `{colors.accent-2}` (`#0A5CC7`) — card overlays, secondary CTAs
-- **Highlight / Call-Out:** `{colors.accent-3}` (`#FFD400`) — warning, important links, accent bands
-- **Page Canvas / Hero:** `{colors.canvas}` (`#090D46`) — dark navy default background, full-bleed sections
+- **Primary CTA / Brand Accent:** `{colors.primary}` (`#C8102E`) — pill-shaped button fills, brand highlights
+- **Secondary / Feature Background:** `{colors.accent-2}` (`#7F1D1D`) — card overlays, secondary CTAs
+- **Highlight / Call-Out:** `{colors.accent-3}` (`#C8102E`) — warning, important links, accent bands
+- **Page Canvas / Hero:** `{colors.canvas}` (`#4C0519`) — deep maroon default background, full-bleed sections
 - **Light Section Alternate:** `{colors.surface-alt}` (`#F7F7F7`) — contrast band, off-white sections
-- **Primary Text / Headings:** `{colors.ink}` (`#FFFFFF`) — on dark backgrounds (navy canvas)
-- **Body Copy (Dark Background):** `{colors.body}` (`#E6F1FF`) — light blue-tinted readable text
+- **Primary Text / Headings:** `{colors.ink}` (`#FFFFFF`) — on dark backgrounds (maroon canvas)
+- **Body Copy (Dark Background):** `{colors.body}` (`#FFE4E6`) — light rose-tinted readable text
 - **Secondary / Muted Text:** `{colors.muted}` (`#767676`) — captions, metadata, de-emphasised copy
 - **Tertiary / Placeholder:** `{colors.faint}` (`#303030`) — inputs, placeholders, fine print
 - **Text on Light Surfaces:** `{colors.on-primary}` (`#222222`) — labels, form text on white/light grey
 
 ### Iteration Guide
 
-1. **Start with full-bleed hero:** Set background to `{colors.canvas}` (`#090D46`), padding `64px` top/bottom, headline in `{typography.display}` (48px, weight 700), text in `{colors.ink}` (`#FFFFFF`).
+1. **Start with full-bleed hero:** Set background to `{colors.canvas}` (`#4C0519`), padding `64px` top/bottom, headline in `{typography.display}` (48px, weight 700), text in `{colors.ink}` (`#FFFFFF`).
 
-2. **Primary buttons are pills (9999px radius):** Always apply `border-radius: 9999px` to main CTAs; use `{colors.primary}` (`#DDDDDD`) fill or `{colors.accent-3}` (`#FFD400`) for high-priority actions.
+2. **Primary buttons are pills (9999px radius):** Always apply `border-radius: 9999px` to main CTAs; use `{colors.primary}` (`#C8102E`) fill or `{colors.accent-3}` (`#C8102E`) for high-priority actions.
 
 3. **Secondary buttons stay sharp (0px radius):** All other buttons, cards, containers use `border-radius: 0px`; no middle ground.
 
-4. **Colour-block depth, don't shadow:** When layering elements, shift background colours (navy → light grey → yellow) instead of adding box-shadows. Reserve shadows for hover states only.
+4. **Colour-block depth, don't shadow:** When layering elements, shift background colours (maroon → light grey → premium red) instead of adding box-shadows. Reserve shadows for hover states only.
 
-5. **Form inputs:** `border-radius: 3px`, `border: 1px solid light-grey`, padding `12px 16px`, font `14px weight 400`, focus state `outline: 2px solid rgba(7, 100, 221, 0.6)`.
+5. **Form inputs:** `border-radius: 3px`, `border: 1px solid light-grey`, padding `12px 16px`, font `14px weight 400`, focus state `outline: 2px solid rgba(200, 16, 46, 0.6)`.
 
 6. **Typography ladder:** Display (48px, 700) → Heading Large (36px, 700) → Heading Medium (28px, 700) → Body Large (18px, 300) → Body (16px, 400) → Body Small (14px, 400). All in Avenir; letter-spacing always 0px.
 
 7. **Spacing increments:** Use `24px` (`{spacing.md}`) for default padding; jump to `36px` (`{spacing.lg}`) for section breaks; reserve `64px` (`{spacing.xxxl}`) for hero padding. Never go below `16px` (`{spacing.xs}`) for content margins.
 
-8. **Focus indicators are mandatory:** Every button, link, input must show `outline: 2px solid rgba(7, 100, 221, 0.6)` or equivalent blue ring on keyboard focus; test with Tab key.
+8. **Focus indicators are mandatory:** Every button, link, input must show `outline: 2px solid rgba(200, 16, 46, 0.6)` or equivalent red ring on keyboard focus; test with Tab key.
 
-9. **Hover states use colour shifts:** Buttons shift background to `rgb(8, 70, 151)` or `rgb(10, 92, 199)`; links underline or invert; never rely on shadow alone.
+9. **Hover states use colour shifts:** Buttons shift background to `#8F0B1E` or `#7F1D1D`; links underline or invert; never rely on shadow alone.
 
 10. **Mobile layout collapses to single column:** At 375px, switch grid to 1 column, keep full-bleed sections, show hamburger menu toggle; heading shrinks to 32px, body stays 16px.
 
@@ -728,7 +728,7 @@ When implementing layouts, prioritize these semantic mappings:
 - **Six colours (Accent 1–2, Accent 4–5) have no measured semantic role.** They appear in the palette but their function is undeclared; treat them as decorative or reserved for future feature use.
 - **Interaction states were not exhaustively captured.** Only CSS-declared states from the extracted stylesheets are documented. Possible states that may exist but were not measured: `:disabled` (button), `:invalid` (form), scrollable section behaviours, drag-and-drop feedback.
 - **Surfaces behind authentication were not visited.** Member-only pages, logged-in states, and account dashboards may use different components or colour roles.
-- **Dark mode or theme variants** were not observed. The extraction represents a single visual theme (dark navy canvas as default); no light-mode alternative was detected or measured.
+- **Dark mode or theme variants** were not observed. The extraction represents a single visual theme (deep maroon canvas as default); no light-mode alternative was detected or measured.
 - **Animated transitions and micro-interactions:** Timing functions, animation durations, and transition curves were not extracted. Use sensible defaults (e.g., `0.2–0.3s` easing for button hover state changes).
 - **Icon specifications:** No icon font, SVG library, or sizing guide was extracted. Icons are used but not systematically documented.
 - **Accessibility / ARIA patterns:** Focus management, live regions, and semantic HTML landmarks are inferred from button and input states only; a full WCAG audit was not performed.
@@ -741,22 +741,22 @@ When implementing layouts, prioritize these semantic mappings:
 ```yaml
 tokens:
   colors:
-    primary: "#DDDDDD"
-    accent: "#00539D"
-    accent-1: "#0000EE"
-    accent-2: "#0A5CC7"
-    accent-3: "#FFD400"
+    primary: "#C8102E"
+    accent: "#9E1B32"
+    accent-1: "#E11D48"
+    accent-2: "#7F1D1D"
+    accent-3: "#C8102E"
     accent-4: "#7B868C"
-    accent-5: "#0230FF"
-    canvas: "#090D46"
+    accent-5: "#F43F5E"
+    canvas: "#4C0519"
     surface-alt: "#F7F7F7"
     ink: "#FFFFFF"
-    body: "#E6F1FF"
+    body: "#FFE4E6"
     muted: "#767676"
     faint: "#303030"
     on-primary: "#222222"
     neutral-1: "#444444"
-    error: "#151B17"
+    error: "#B00020"
   typography:
     display:
       size: 48px
@@ -862,8 +862,8 @@ tokens:
     thin: 1px
     medium: 2px
   shadows:
-    sm-button: "rgb(10, 92, 199) 0px 0px 0px 0px"
-    md-button-inset: "rgb(255, 221, 0) 0px -4px 0px 0px inset"
+    sm-button: "#7F1D1D 0px 0px 0px 0px"
+    md-button-inset: "#C8102E 0px -4px 0px 0px inset"
   opacity:
     hover: 0.85
     muted: 0.70

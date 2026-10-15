@@ -1,20 +1,22 @@
 import HomeHero from "@/components/home/hero";
 import AudienceTabs from "@/components/home/audience-tabs";
 import LatestUpdates from "@/components/home/updates";
-import Spotlight from "@/components/home/spotlight";
-import { Partners } from "@/components/home/about-partners-contact";
+import SonarFindingsLazy from "@/components/home/sonar-findings-lazy";
+import ShowcaseVideo from "@/components/home/showcase-video";
+import CtaBento from "@/components/home/cta-bento";
 
 export default function Home() {
   return (
     <>
 
       <HomeHero />
-      <div className="grid sm:pb-32 pb-24 gap-12 sm:gap-16 ">
+      <div className="grid gap-12 bg-canvas pb-24 sm:gap-16 sm:pb-32">
         <AudienceTabs />
         <LatestUpdates />
       </div>
-      <Spotlight />
-      <Partners />
+      <SonarFindingsLazy />
+      <ShowcaseVideo />
+      <CtaBento />
     </>
   );
 }

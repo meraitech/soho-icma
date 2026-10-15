@@ -5,7 +5,7 @@ import { latestUpdates } from "@/data/site";
 
 export default function LatestUpdates() {
   return (
-    <section >
+    <section className="bg-canvas text-white">
       <div className="mx-auto max-w-6xl px-4  sm:px-6 ">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-[28px] font-bold sm:text-4xl">
@@ -13,7 +13,7 @@ export default function LatestUpdates() {
           </h2>
           <Link
             href="/announcements"
-            className="hidden shrink-0 items-center gap-1 text-base font-bold text-[#090d46] hover:text-[#0a5cc7] hover:underline sm:flex"
+            className="hidden shrink-0 items-center gap-1 text-base font-bold text-white hover:text-brand-200 hover:underline sm:flex"
           >
             All updates <ArrowRight className="size-4" />
           </Link>
@@ -36,10 +36,10 @@ export default function LatestUpdates() {
                 />
               </div>
               <div className="flex flex-1 flex-col px-0 pt-4">
-                <p className="text-xs font-bold tracking-[0px] text-[#00539d] uppercase">
+                <p className="text-xs font-bold tracking-[0px] text-brand-200 uppercase">
                   {u.category} · {u.date}
                 </p>
-                <p className="mt-2 line-clamp-3 text-base leading-snug font-bold text-[#222222]">
+                <p className="mt-2 line-clamp-3 text-base leading-snug font-bold text-white">
                   {u.title}
                 </p>
               </div>

@@ -55,7 +55,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "group/navigation-menu-trigger inline-flex h-12 w-max items-center justify-center rounded-none px-4 py-1.5 text-base font-normal transition-colors outline-none hover:bg-[rgba(115,133,159,0.5)] focus-visible:outline-2 focus-visible:outline-[rgba(7,100,221,0.6)] disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-[rgba(115,133,159,0.5)] data-open:bg-[rgba(115,133,159,0.5)]"
+  "group/navigation-menu-trigger inline-flex h-12 w-max items-center justify-center rounded-none px-4 py-1.5 text-base font-normal transition-colors outline-none hover:bg-highlight/10 focus-visible:outline-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 data-popup-open:bg-highlight/10 data-open:bg-highlight/10"
 )
 
 function NavigationMenuTrigger({
@@ -128,7 +128,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "flex items-center gap-2 rounded-none p-2 text-base transition-colors outline-none hover:bg-[rgba(115,133,159,0.5)] focus-visible:outline-2 focus-visible:outline-[rgba(7,100,221,0.6)] in-data-[slot=navigation-menu-content]:rounded-none data-active:bg-[rgba(115,133,159,0.5)] [&_svg:not([class*='size-'])]:size-4",
+        "flex items-center gap-2 rounded-none p-2 text-base transition-colors outline-none hover:bg-highlight/10 focus-visible:outline-2 focus-visible:outline-ring in-data-[slot=navigation-menu-content]:rounded-none data-active:bg-highlight/10 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
       {...props}

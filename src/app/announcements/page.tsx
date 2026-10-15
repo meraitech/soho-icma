@@ -25,7 +25,7 @@ export default function AnnouncementsPage() {
         title="Branch Announcements"
         intro="Official updates from the CMA Indonesia branch."
       />
-      <section className="bg-white">
+      <section className="bg-background">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {announcements.map((u) => (
@@ -44,10 +44,10 @@ export default function AnnouncementsPage() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col px-0 pt-4">
-                  <p className="text-xs font-bold tracking-[0px] text-[#00539d] uppercase">
+                  <p className="text-xs font-bold tracking-[0px] text-brand-core uppercase">
                     {u.category} · {u.date}
                   </p>
-                  <p className="mt-2 line-clamp-3 text-base leading-snug font-bold text-[#222222]">
+                  <p className="mt-2 line-clamp-3 text-base leading-snug font-bold text-foreground">
                     {u.title}
                   </p>
                 </div>

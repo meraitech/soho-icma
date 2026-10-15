@@ -50,7 +50,7 @@ export default function MembershipPage() {
         title="Membership"
         intro="Join a premier body of professionals practising the science of management accounting."
       />
-      <section className="bg-white">
+      <section className="bg-background">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="grid gap-6 md:grid-cols-3">
             {tiers.map((t) => (
@@ -59,15 +59,15 @@ export default function MembershipPage() {
                   <CardTitle>{t.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-base leading-[1.33] font-normal text-[#303030]">{t.text}</p>
+                  <p className="text-base leading-[1.33] font-normal text-faint">{t.text}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="mt-10 rounded-none bg-[#090d46] p-8 text-white sm:p-12">
+          <div className="mt-10 rounded-none bg-canvas p-8 text-white sm:p-12">
             <h2 className="text-[22px] font-bold tracking-[0px]">Membership application pack</h2>
-            <p className="mt-2 max-w-2xl text-base font-light text-[#e6f1ff]">
+            <p className="mt-2 max-w-2xl text-base font-light text-body-dark">
               Download the official CMA membership application forms and submit them to the
               branch secretariat.
             </p>
@@ -76,30 +76,30 @@ export default function MembershipPage() {
                 href="https://www.cmawebline.org/membership/application.html"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-1 rounded-full bg-[#ffd400] px-6 py-3 text-base font-bold text-[#090d46] hover:bg-white"
+                className="inline-flex items-center justify-center gap-1 rounded-full bg-highlight px-6 py-3 text-base font-bold text-white hover:bg-background hover:text-canvas"
               >
                 Download forms <ArrowRight className="size-4" />
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-1 rounded-full bg-[#0a5cc7] px-6 py-3 text-base font-bold text-white hover:bg-[#084697]"
+                className="inline-flex items-center justify-center gap-1 rounded-full bg-electric px-6 py-3 text-base font-bold text-white hover:bg-electric-deep"
               >
                 Contact secretariat
               </Link>
             </div>
           </div>
 
-          <h2 id="faq" className="mt-14 scroll-mt-24 text-[28px] font-bold tracking-[0px] text-[#222222]">
+          <h2 id="faq" className="mt-14 scroll-mt-24 text-[28px] font-bold tracking-[0px] text-foreground">
             Frequently asked questions
           </h2>
           <Accordion defaultValue={["faq-0"]} className="mt-4">
             {faqs.map((f, i) => (
               <AccordionItem key={f.q} value={`faq-${i}`}>
-                <AccordionTrigger className="text-left font-bold text-[#222222]">
+                <AccordionTrigger className="text-left font-bold text-foreground">
                   {f.q}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className="text-base leading-[1.33] font-normal text-[#303030]">{f.a}</p>
+                  <p className="text-base leading-[1.33] font-normal text-faint">{f.a}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}

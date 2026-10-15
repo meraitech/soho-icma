@@ -14,37 +14,37 @@
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  /* Canonical DESIGN.md tokens */
-  --color-canvas: #090d46;
-  --color-canvas-deep: #050724;
-  --color-canvas-line: #272a5c;
-  --color-brand-core: #00539d;
-  --color-electric: #0a5cc7;
-  --color-electric-deep: #084697;
-  --color-focus-blue: #0764dd;
-  --color-highlight: #ffd400;
+  /* Canonical DESIGN.md tokens — premium red / deep maroon */
+  --color-canvas: #4c0519;
+  --color-canvas-deep: #26060c;
+  --color-canvas-line: #7f1d22;
+  --color-brand-core: #9e1b32;
+  --color-electric: #c8102e;
+  --color-electric-deep: #8f0b1e;
+  --color-focus-blue: #c8102e;
+  --color-highlight: #c8102e;
   --color-surface-alt: #f7f7f7;
-  --color-body-dark: #e6f1ff;
+  --color-body-dark: #ffe4e6;
   --color-muted-custom: #767676;
   --color-faint: #303030;
   --color-on-primary: #222222;
-  --color-accent-1: #0000ee;
+  --color-accent-1: #e11d48;
   --color-accent-4: #7b868c;
-  --color-accent-5: #0230ff;
+  --color-accent-5: #f43f5e;
   --color-neutral-1: #444444;
 
-  /* Compat ramps — remapped to DESIGN.md palette (replaces old red/ink/gold) */
-  --color-brand-50: #e6f1ff;
-  --color-brand-100: #c9dff5;
-  --color-brand-200: #75acff;
-  --color-brand-300: #4d94f0;
-  --color-brand-400: #1a76e0;
-  --color-brand-500: #0a5cc7;
-  --color-brand-600: #00539d;
-  --color-brand-700: #084697;
-  --color-brand-800: #0b2a6b;
-  --color-brand-900: #090d46;
-  --color-brand-950: #050724;
+  /* Compat ramps — remapped to premium red (replaces old navy/yellow) */
+  --color-brand-50: #fef2f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #c8102e;
+  --color-brand-600: #9e1b32;
+  --color-brand-700: #8f0b1e;
+  --color-brand-800: #7f1d1d;
+  --color-brand-900: #4c0519;
+  --color-brand-950: #26060c;
 
   --color-ink-50: #f9fcfd;
   --color-ink-100: #e8eaeb;
@@ -53,19 +53,19 @@
   --color-ink-400: #6b829f;
   --color-ink-500: #43587a;
   --color-ink-600: #2f3f5c;
-  --color-ink-700: #272a5c;
-  --color-ink-800: #1a2060;
-  --color-ink-900: #0f144d;
-  --color-ink-950: #090d46;
+  --color-ink-700: #7f1d22;
+  --color-ink-800: #5e0b15;
+  --color-ink-900: #4c0519;
+  --color-ink-950: #26060c;
 
-  --color-gold-50: #fff8d6;
-  --color-gold-100: #ffef9e;
-  --color-gold-200: #ffe45c;
-  --color-gold-300: #ffd400;
-  --color-gold-400: #ffd400;
-  --color-gold-500: #e6bf00;
-  --color-gold-600: #b98a1f;
-  --color-gold-700: #755815;
+  --color-gold-50: #fef2f2;
+  --color-gold-100: #ffe4e6;
+  --color-gold-200: #fecdd3;
+  --color-gold-300: #c8102e;
+  --color-gold-400: #c8102e;
+  --color-gold-500: #9e1b32;
+  --color-gold-600: #8f0b1e;
+  --color-gold-700: #7f1d1d;
 }
 
 @theme inline {
@@ -119,66 +119,66 @@
   --card-foreground: #303030;
   --popover: #ffffff;
   --popover-foreground: #222222;
-  --primary: #090d46;
+  --primary: #c8102e;
   --primary-foreground: #ffffff;
   --secondary: #f7f7f7;
   --secondary-foreground: #222222;
   --muted: #f7f7f7;
   --muted-foreground: #767676;
-  --accent: #090d46;
+  --accent: #4c0519;
   --accent-foreground: #ffffff;
   --destructive: #b00020;
   --border: #d6d9da;
   --input: #c8c8c8;
-  --ring: #0a5cc7;
-  --chart-1: #00539d;
-  --chart-2: #0a5cc7;
-  --chart-3: #ffd400;
+  --ring: #c8102e;
+  --chart-1: #9e1b32;
+  --chart-2: #c8102e;
+  --chart-3: #e11d48;
   --chart-4: #7b868c;
   --chart-5: #444444;
   --radius: 0px;
   --sidebar: #ffffff;
   --sidebar-foreground: #222222;
-  --sidebar-primary: #090d46;
+  --sidebar-primary: #c8102e;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #f7f7f7;
   --sidebar-accent-foreground: #222222;
   --sidebar-border: #d6d9da;
-  --sidebar-ring: #0a5cc7;
+  --sidebar-ring: #c8102e;
 }
 
 .dark {
-  --background: #090d46;
+  --background: #4c0519;
   --foreground: #ffffff;
-  --card: #0f144d;
+  --card: #5e0b15;
   --card-foreground: #ffffff;
-  --popover: #0f144d;
+  --popover: #5e0b15;
   --popover-foreground: #ffffff;
-  --primary: #ffd400;
-  --primary-foreground: #090d46;
-  --secondary: #1a2060;
+  --primary: #ffffff;
+  --primary-foreground: #4c0519;
+  --secondary: #7f1d1d;
   --secondary-foreground: #ffffff;
-  --muted: #1a2060;
-  --muted-foreground: #e6f1ff;
-  --accent: #0a5cc7;
+  --muted: #7f1d1d;
+  --muted-foreground: #ffe4e6;
+  --accent: #c8102e;
   --accent-foreground: #ffffff;
   --destructive: #ff6b6b;
-  --border: #272a5c;
-  --input: #2f3f5c;
-  --ring: #75acff;
-  --chart-1: #75acff;
-  --chart-2: #0a5cc7;
-  --chart-3: #ffd400;
+  --border: #7f1d22;
+  --input: #7f1d22;
+  --ring: #fecdd3;
+  --chart-1: #fecdd3;
+  --chart-2: #c8102e;
+  --chart-3: #f43f5e;
   --chart-4: #7b868c;
-  --chart-5: #e6f1ff;
-  --sidebar: #0f144d;
+  --chart-5: #ffe4e6;
+  --sidebar: #4c0519;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #ffd400;
-  --sidebar-primary-foreground: #090d46;
-  --sidebar-accent: #1a2060;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #4c0519;
+  --sidebar-accent: #7f1d1d;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #272a5c;
-  --sidebar-ring: #75acff;
+  --sidebar-border: #7f1d22;
+  --sidebar-ring: #fecdd3;
 }
 
 @layer base {
@@ -200,9 +200,9 @@
     font-family: var(--font-heading);
     letter-spacing: 0px;
   }
-  /* DESIGN.md §4: mandatory visible focus — blue 2px ring, 3px radius */
+  /* DESIGN.md §4: mandatory visible focus — premium red 2px ring, 3px radius */
   :where(a, button, input, textarea, select, [tabindex]):focus-visible {
-    outline: 2px solid rgba(7, 100, 221, 0.6);
+    outline: 2px solid rgba(200, 16, 46, 0.6);
     outline-offset: 2px;
     border-radius: 3px;
   }

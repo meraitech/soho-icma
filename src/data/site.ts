@@ -14,10 +14,7 @@ export const utilityNav: NavLink[] = [
 ];
 
 export const mainNav: NavLink[] = [
-  { label: "Become a CMA", href: "/programs" },
-  { label: "Members", href: "/membership" },
   { label: "Education Programs", href: "/programs" },
-  { label: "Events", href: "/events" },
   { label: "CFO Award", href: "/cfo-award" },
   { label: "About Us", href: "/about" },
 ];

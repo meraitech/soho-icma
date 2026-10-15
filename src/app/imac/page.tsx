@@ -25,9 +25,9 @@ export default function ImacPage() {
         title="IMAC"
         intro="International Management Accounting Collaborative — the global body accrediting the CMA pathway."
       />
-      <section className="bg-white">
+      <section className="bg-background">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-          <p className="max-w-3xl text-base leading-[1.33] font-normal text-[#303030]">
+          <p className="max-w-3xl text-base leading-[1.33] font-normal text-faint">
             CMAs in Indonesia are qualified via the education and training programme accredited
             by the International Management Accounting Collaborative and delivered by the
             Institute of Certified Management Accountants (Australia & New Zealand).
@@ -37,10 +37,10 @@ export default function ImacPage() {
               <a key={l.title} href={l.href} target="_blank" rel="noreferrer" className="group">
                 <Card className="h-full">
                   <CardHeader>
-                    <CardTitle className="group-hover:text-[#0a5cc7]">{l.title}</CardTitle>
+                    <CardTitle className="group-hover:text-electric">{l.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-base font-normal text-[#303030]">{l.text}</p>
+                    <p className="text-base font-normal text-faint">{l.text}</p>
                   </CardContent>
                 </Card>
               </a>
